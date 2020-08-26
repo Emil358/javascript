@@ -15,8 +15,10 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.2",
     "extract-text-webpack-plugin-last": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "dependencies": {}
 }

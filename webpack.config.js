@@ -1,12 +1,12 @@
 let path = require('path');
-let ExtractTextPlugin = require("extract-text-webpack-plugin-last");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 let conf = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'main.js',
-    // publicPath: 'dist/'
+    publicPath: 'dist/'
   },
   module: {
     rules: [
@@ -21,16 +21,11 @@ let conf = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          // fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       }
     ]    
   },
-  plugins: [
-    new ExtractTextPlugin("styles.css"),
-  ]
+  plugins: [new MiniCssExtractPlugin()]
 };
 
 module.exports = conf;

@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #f5f5f5;
+	margin: auto;
+	align-items: center;
+}
+
+button {
+	border: 0px;
+	padding: 20px;
+	background-color: blue;
+	color: #fff;
+	font-size: 40px;
+}
+
+button:hover {
+	opacity: 0.75;
+}
